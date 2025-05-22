@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "watersource",
+	"version": "1.0.0",
+	"name": "watersource",
+	"description": "This mod adds a water source block that does not spread or connect",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/watersource/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.watersource.Watersource"
+		],
+		"client": [
+			"com.watersource.WatersourceClient"
+		]
+	},
+	"mixins": [
+		"watersource.mixins.json",
+		{
+			"config": "watersource.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
